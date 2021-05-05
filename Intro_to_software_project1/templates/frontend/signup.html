@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'public/style.css' %}">
+    <link rel="stylesheet" href="{% static 'public/bootstrap.min.css' %}">
+    <title>Document</title>
+</head>
+<body style="padding-top:30px;">
+    
+
+<div class="container">
+  <aside style=" padding-top:30px;">
+  <form action="#" method="post" class="m-5">
+  <div>
+  <h3 style=" margin-left:20px; color:#ffff !important;">Sign Up</h3>
+  </div>
+      {% if messages %}
+        {% for mes in messages %}
+          <div class="alert alert-success">{{ mes }}</div>
+        {% endfor %}
+      {% endif %}
+      {{ reg }}
+      <div id="pass-info" class="clearfix"></div>
+      <div style="padding-top: 20px; padding-bottom:20px;">
+        <input type="submit" class="btn btn-danger" class="btn_1 rounded full-width add_top_30 text-center" value="Register" 
+        style="margin-left: 10px; padding-top: 40px; padding: 10px; font-size: 20px; border-radius:20px; width: 150px;"> Already have an account ? <a href="{% url 'backend:login_view'%}">Sign in</a>
+      </div>
+      {% csrf_token %}
+  </form>
+           
+</aside>
+</div>
+
+
+       <script src="{% static 'public/jquery.js' %}"></script>
+       <script src="{% static 'public/main.js' %}"></script>
+
+</body>
+</html>

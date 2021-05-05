@@ -1,0 +1,42 @@
+
+.text{
+    color: white;
+}
+
+.spec{
+    color:  rgb(209, 107, 124);
+    
+}
+
+.head{
+    margin-left: 20%;
+}
+
+.abutton{
+    background-color: rgb(209, 107, 124);
+    width: 100%;
+}
+
+.signup{
+    text-align: center;
+}
+
+aside{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* background-color: rgba(0, 0, 0, .8); */
+    background-color: black;
+}
+
+.pass{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+nav li{
+    margin-right: 100%;
+}

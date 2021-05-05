@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'public/style.css' %}">
+    <link rel="stylesheet" href="{% static 'public/bootstrap.min.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+       <aside>
+        <form action="#" method='post' class="form m-5">
+
+            
+            <div class="w-50 mx-auto">
+                <br><br>
+                <h3 class="spec head" >Engineering School</h3>
+                <br>
+                <div class="form-group">
+                    <!-- <form action="" method="get"></form> -->
+                    <input type="number" name="username" placeholder="Username" class="form-control" placeholder="Enter Student Id">
+                </div>
+
+                <div class="form-group">
+                    <!-- <form action="" method="get"></form> -->
+                    <input type="password" name="password" placeholder="Password" class="form-control" placeholder="Enter password">
+                </div>
+
+                <button type="submit" class=" abutton " id="abutton">login</button>
+                <div class="signup">
+                    <p class="text">Don't have an account?? <br> <a href="{%url 'backend:register_form' %}" class="spec"> sign up </a> here <br><br> </p>
+                </div>
+            </div>
+            {% csrf_token %}
+           </form>
+           
+       </aside>
+
+       <script src="{% static 'public/jquery.js' %}"></script>
+       <script src="{% static 'public/main.js' %}"></script>
+
+</body>
+</html>
